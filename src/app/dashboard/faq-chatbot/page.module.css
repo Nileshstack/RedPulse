@@ -1,0 +1,163 @@
+.container {
+  padding: 24px;
+  max-width: 800px;
+  margin: auto;
+  min-height: 80vh;
+}
+
+.mainHeading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #f44539;
+}
+
+.subHeading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #7285a2;
+}
+
+.faqSection {
+  margin-bottom: 40px;
+  color: black;
+}
+
+.faqCard {
+  background: #ffffff;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faqCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.inputSection {
+  margin-bottom: 14px;
+}
+
+.textArea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  min-height: 90px;
+  background-color: #160009;
+  font-size: 15px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: white;
+}
+
+.textArea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ee0606, #a50101);
+}
+
+.answerBox {
+  background: #f0f9ff;
+  padding: 14px;
+  margin-top: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.chatbotLayout {
+  display: flex;
+  gap: 100px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.leftSide {
+  flex: 1;
+  min-width: 300px;
+}
+
+.rightSide {
+  flex: 1;
+  min-width: 300px;
+  background: #f0f9ff;
+  padding: 16px;
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+  font-size: 15px;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .chatbotLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .leftSide,
+  .rightSide {
+    min-width: 100%;
+  }
+
+  .mainHeading {
+    font-size: 26px;
+  }
+
+  .subHeading {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .mainHeading {
+    font-size: 22px;
+  }
+
+  .subHeading {
+    font-size: 16px;
+  }
+
+  .faqCard {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .textArea {
+    font-size: 14px;
+    min-height: 80px;
+  }
+}
