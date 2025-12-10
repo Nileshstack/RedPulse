@@ -1,16 +1,8 @@
 .container {
   padding: 24px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
-  min-height: 80vh;
-}
-
-.mainHeading {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-align: center;
-  color: #f44539;
+  min-height: 70vh;
 }
 
 .subHeading {
@@ -18,7 +10,7 @@
   font-weight: 600;
   margin-bottom: 16px;
   text-align: center;
-  color: #7285a2;
+  color: #b91c1c;
 }
 
 .faqSection {
@@ -97,6 +89,24 @@
   flex-wrap: wrap;
 }
 
+
+.columns {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chatbotColumn {
+   flex: 1 1 520px;
+    min-width: 320px; 
+  }
+.donationColumn { 
+  flex: 1 1 520px;
+   min-width: 320px; 
+  }
+
 .leftSide {
   flex: 1;
   min-width: 300px;
@@ -160,4 +170,136 @@
     font-size: 14px;
     min-height: 80px;
   }
+}
+
+/* Donation section styles */
+.donationSection {
+  margin-top: 48px;
+  background: transparent;
+  padding: 18px 12px 36px 12px;
+}
+
+.donationHeading {
+  text-align: center;
+  font-size: 30px;
+  color: #b91c1c;
+  font-weight: 700;
+  margin-bottom: 18px;
+  margin-top: 0%;
+}
+
+.bloodTypePicker {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.pickerLabel {
+  color: #5b6b7a;
+  margin-bottom: 8px;
+}
+.pickerLabel span { 
+  color: #b91c1c; 
+  font-weight: 700;
+ }
+
+.bloodButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bloodBtn {
+  background: #fff;
+  border: 2px solid #e6a8a8;
+  color: #111827;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(185,28,28,0.06);
+}
+
+.bloodBtn:hover { transform: translateY(-3px); }
+
+.selected {
+  background: #b91c1c;
+  color: #fff;
+  border-color: #7f0f0f;
+}
+
+.donationCardRow {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.compatCards { 
+  flex: 1; 
+  min-width: 280px; 
+  max-width: 680px;
+ }
+
+.takeCard, .giveCard {
+  display:flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.takeCard { 
+  background: #ffd8b8; 
+}
+.giveCard {
+   background: #bfe0ff; 
+  }
+
+.avatarPlaceholder, .avatarPlaceholderBlue {
+  width: 84px; 
+  height: 84px;
+   border-radius: 8px;
+    
+}
+.avatarPlaceholderBlue { 
+  background: rgba(0,0,0,0.06); 
+  
+}
+.avatarPlaceholder, .avatarPlaceholderBlue {
+  width: 84px;
+  height: 84px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarPlaceholder img,
+.avatarPlaceholderBlue img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardContent h3 { 
+  margin: 0 0 8px 0;
+   font-size: 18px;
+   }
+.largeText { 
+  font-size: 20px; 
+  font-weight: 700;
+ }
+  
+
+@media (max-width: 480px) {
+  .donationCardRow { 
+    flex-direction: column;
+     align-items: stretch 
+    }
 }

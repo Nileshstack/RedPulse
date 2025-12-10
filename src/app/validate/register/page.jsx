@@ -15,7 +15,7 @@ const Page = () => {
       const role = form.role.value;
 
       if(!name || !email || !password || !role){
-        return toast.warn("credentials required")
+        return toast.error("Credentials required")
       }
       try {
         const res = await fetch("/api/auth/register",{
@@ -45,7 +45,6 @@ const Page = () => {
   <select name="role" className={styles.select}>
     <option value="donor">Donor</option>
     <option value="receiver">Receiver</option>
-    <option value="admin">Admin</option>
   </select>
 
   <button className={styles.button}>Register</button>

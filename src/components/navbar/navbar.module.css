@@ -23,7 +23,32 @@
     gap: 20px;
     flex-wrap: wrap;
 }
+.link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* distance from text */
+  width: 0;
+  height: 2px;
+  background-color: #c91003; /* underline color */
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: #c91003;
+}
+
+.link:hover::after {
+  width: 100%;
+}
 .logout {
     padding: 5px 10px;
     border: none;

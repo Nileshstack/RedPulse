@@ -32,7 +32,7 @@ const Login = () => {
 
     if (res?.error) {
       console.log("Login failed:", res.error);
-      toast.warn("Invalid credentials");
+      toast.error("Invalid credentials");
     }
   };
 
